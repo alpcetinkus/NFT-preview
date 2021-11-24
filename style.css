@@ -28,10 +28,34 @@ body {
 }
 .card-img {
   border-radius: 10px;
+  width: 100%;
+}
+.card-images {
+  position: relative;
+  border-radius: 10px;
+  background-color: rgba(0, 255, 247, 0.5);
+}
+.card-images svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.card-images:hover svg {
+  opacity: 1;
+}
+.card-images:hover img {
+  mix-blend-mode: lighten;
 }
 .title-box {
   padding-top: 10px;
   color: hsl(0, 0%, 100%);
+  transition: color 300ms ease;
+}
+.title-box:hover {
+  color: hsl(178, 100%, 50%);
 }
 .text-box {
   padding-top: 10px;
